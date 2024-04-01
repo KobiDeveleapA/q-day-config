@@ -1,0 +1,42 @@
+appName: postgres
+
+replicaCount: 3
+
+image:
+  repository: postgres
+  pullPolicy: IfNotPresent
+  tag: 14
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+configMap:
+  # Specifies configMap values
+  POSTGRES_DB: postgres_db
+  POSTGRES_USER: kobi
+  POSTGRES_PASSWORD: password
+
+service:
+  # Specifies service values
+  type: ClusterIP
+  port: 5432
+
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
