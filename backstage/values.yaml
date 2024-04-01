@@ -3,9 +3,9 @@ appName: backstage
 replicaCount: 1
 
 image:
-  repository: roadiehq/community-backstage-image
+  repository: kobiav/backstage
   pullPolicy: IfNotPresent
-  tag: latest
+  tag: 1.0.0
   containerPort: 7000
 
 imagePullSecrets: []
