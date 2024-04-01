@@ -3,10 +3,10 @@ appName: backstage
 replicaCount: 1
 
 image:
-  repository: backstage
+  repository: roadiehq/community-backstage-image
   pullPolicy: IfNotPresent
-  tag: 1.0.0
-  containerPort: 7007
+  tag: latest
+  containerPort: 7000
 
 imagePullSecrets: []
 nameOverride: ""
